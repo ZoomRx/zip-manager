@@ -9,9 +9,12 @@ export class ZipManagerWeb extends WebPlugin implements ZipManagerPlugin {
     });
   }
 
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async extract(_options: { files: [string], destination: string }): Promise<void> {
+    return new Promise((_resolve, reject) => reject);
+  }
+
+  async compress(_options: { files: [string], destination: string }): Promise<void> {
+    return new Promise((_resolve, reject) => reject);
   }
 }
 

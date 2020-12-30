@@ -5,5 +5,6 @@ declare module '@capacitor/core' {
 }
 
 export interface ZipManagerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  extract(options: { files: [string], destination: string }): Promise<void>;
+  compress(options: { files: [string], destination: string }): Promise<void>;
 }
